@@ -1,0 +1,14 @@
+# Ignore the Sphinx build directory
+_build
+
+# Ignore vim swap files
+.*.swp
+
+# Don't store the python virtual env
+.venv
+
+# direnv settings are personal
+.envrc
+
+# Ignore Mac data
+.DS_Store

@@ -1,0 +1,37 @@
+#
+# This started out for vscode alone. Then grew to include
+# python Sphinx for which vscode has a plugin. Then grew
+# to include stats modules and visualization modules.
+#
+
+Sphinx
+certifi                 # SSL certificate management
+commonmark              # Common Markdown, may not need with MyST
+fastcluster
+graphviz                # Support for graphviz diagrams
+ipython
+jupyter
+jupyter-sphinx
+matplotlib
+myst-nb                 # MyST Markdown support for 'ipynb'
+myst-parser             # MyST Markdown supports 'directives'
+nbsphinx
+numpy
+pandas
+pip
+pylint
+recommonmark
+rstcheck
+scipy
+seaborn
+sphinx-autobuild
+sphinx-jinja
+statsmodels
+Flask-Sphinx-Themes
+sphinxcontrib-plantuml
+sphinxcontrib-confluencebuilder
+sphinx-autoapi
+sphinx-bootstrap-theme
+sphinx-rtd-theme
+snooty-lextudio
+

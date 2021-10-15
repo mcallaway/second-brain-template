@@ -1,0 +1,12 @@
+# Contacts
+
+This is a set of Human Resources. Fundamentally they're not any different than the content over in `./resources`, but I felt like there were times when I wanted to look specifically for material about people or groups, so I separated it out.
+
+```{toctree}
+---
+maxdepth: 1
+glob:
+---
+```
+
+% wiki links for foam graph
