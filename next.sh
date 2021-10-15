@@ -57,11 +57,9 @@ cp ${TOP}/template.${FORMAT} $NEXTLOG
 # Set the title to the current date
 sed  -i '' -e "s/Day Month/${DATE}/" $NEXTLOG
 
-# Is there a need to show myself what I was doing last time?
-#sed -n '/begin-followup/,/end-followup/p' $LASTLOG | tee -a $NEXTLOG
+# Show myself what I was doing yesterday.
+sed -n '/begin-followup/,/end-followup/p' $LASTLOG | tee -a $NEXTLOG
 
-# Open it in VIM
-#mvim $NEXTLOG
 # Open in VSCode
 echo code . -a . -g $NEXTLOG
 code . -a . -g $NEXTLOG
