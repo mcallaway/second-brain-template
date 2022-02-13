@@ -45,8 +45,8 @@ contacts:
 
 stats: resources contacts
 	@echo Build stats
-	@FILECOUNT=$$(find . -mindepth 2 -not -name "*.png" -type f $$( printf -- ' -not -path */%s/* ' .git .venv .vscode _build ) | wc -l | tr -d ' '); \
-	WORDCOUNT=$$(find . -mindepth 2 -not -name "*.png" -type f $$( printf -- ' -not -path */%s/* ' .git .venv .vscode _build ) | xargs -n1 wc -w | awk '{sum+=$$1}END{print sum}'); \
+	@FILECOUNT=$$(find . -mindepth 2 -type f $$( printf -- ' -not -path */%s/* ' .git .venv .vscode _build ) | wc -l | tr -d ' '); \
+	WORDCOUNT=$$(find . -mindepth 2 -type f $$( printf -- ' -not -path */%s/* ' .git .venv .vscode _build ) | xargs -n1 wc -w | awk '{sum+=$$1}END{print sum}'); \
 	echo File count $${FILECOUNT}; \
 	echo Word count $${WORDCOUNT}; \
 	sed -i '' -e "s/^- File count:.*/- File count: $${FILECOUNT}/" index.md ; \
@@ -54,20 +54,6 @@ stats: resources contacts
 
 next:
 	@./next.sh ||:
-
-vault:
-	@vault token lookup >/dev/null 2>&1 || vault login --method=oidc
-
-# Note here that grep -q changes the nature of the file descriptor
-# with vpn status, somehow, such that it seems to hang.
-vpn:
-	vpn status 2>&1 | grep "state: Disconnected" ; \
-		if [[ $$? -eq 0 ]]; then \
-			echo vpn connecting ; \
-			vpn -s connect BY-NA-macOS-SmartAuth ; \
-		else \
-			echo vpn is connected ; \
-		fi
 
 YESTERDAY=$(shell gdate -d yesterday +%A)
 commit: stats html
