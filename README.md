@@ -6,5 +6,3 @@ This is a Second Brain. It is a collection of notes written in Markdown and/or r
 
 Begin at [Getting Started](documentation/start-here.md) for an introduction and background material.
 
-![It looks like this](images/second-brain.png)
-
