@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "rubymaniac.vscode-direnv",
+        "foam.foam-vscode",
+        "yzhang.markdown-all-in-one",
+        "ms-python.python",
+        "lextudio.restructuredtext",
+        "vscodevim.vim"
+    ]
+}

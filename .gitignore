@@ -7,8 +7,9 @@ _build
 # Don't store the python virtual env
 .venv
 
-# direnv settings are personal
-.envrc
+# direnv settings are personal, but
+# let's include something as an example.
+#.envrc
 
 # Ignore Mac data
 .DS_Store
