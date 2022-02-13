@@ -62,6 +62,10 @@ I felt like I had put together a set of tools and ideas that had captured the id
 
 ## Requirements
 
+!!! Note
+
+    These tools and methods assume a base level of comfort and familiarity with technical tools like the `bash` shell, `make`, `git`, and `python`. It will be challenging for a non-technical user.
+
 - Avoid proprietary tools, use tools with a long standing community, prefer open source.
 - Avoid proprietary data formats, write in **plain text** whenever possible.
 - Store everything in [Git](https://git-scm.com/) for change control.
@@ -550,10 +554,25 @@ So recall how things are organized:
 
 Every day when you sit down:
 
-- Begin a new journal entry with `make next commit`.
-- Keep track of work carried over day to day.
-- At the end of each week, synthesize the work of the week, progress, goals.
-- Each month review links made, update projects, make higher level progress.
+- Every day:
+
+  + Begin a new journal entry with `make next commit`.
+  + `make` will update stats and the sub-directory "chapter" documents.
+  + Keep track of work carried over day to day.
+  + Add content in journal, resources, contacts as it occurs.
+
+- Every week:
+
+  + Perform a "retrospective" and summarize the week's activities and progress.
+  + The "journal/$YEAR/week-\${WEEKNUM}/week-\${WEEKNUM}.md" need wiki links for the daily journals.
+  + Review the Foam Graph: clean up links and tend to "orphan" items you've added.
+
+- Every month:
+
+  + Perform a "retrospective" and summarize the month's progress.
+  + Revisit goals and areas, are you achieving progress?
+
+- Use wiki-links like `[[some-thing]]` to make connections.
 
 Over time your `resources` and `contacts` grow with specific topics and people. Your `journal` grows with daily work. Think about how to map this to `projects`. Again "Projects" have goals and timelines, while "Areas" are areas of focus that you return to from time to time, and have some similar characteristics to projects, but do not have timelines. For example, one area I have is "Project Management". I return to that topic from time to time but have no specific deliverables or timelines, so it's an "Area" for me.
 
