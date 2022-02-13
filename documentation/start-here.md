@@ -62,9 +62,8 @@ I felt like I had put together a set of tools and ideas that had captured the id
 
 ## Requirements
 
-!!! Note
-
-    These tools and methods assume a base level of comfort and familiarity with technical tools like the `bash` shell, `make`, `git`, and `python`. It will be challenging for a non-technical user.
+> **Note**
+> These tools and methods assume a base level of comfort and familiarity with technical tools like the `bash` shell, `make`, `git`, and `python`. It will be challenging for a non-technical user.
 
 - Avoid proprietary tools, use tools with a long standing community, prefer open source.
 - Avoid proprietary data formats, write in **plain text** whenever possible.
